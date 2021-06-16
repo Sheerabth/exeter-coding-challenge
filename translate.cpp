@@ -93,6 +93,7 @@ int main() {
 
     frequencyFile.open(frequencyFileName, ios::out);
     
+    frequencyFile << "English word,French word,Frequency" << endl;
     map<pair<string, string>, int>::iterator iter;
     for(iter = freqeuncy.begin(); iter!= freqeuncy.end(); iter++)
         frequencyFile << iter->first.first << "," << iter->first.second << "," << iter->second << endl;
